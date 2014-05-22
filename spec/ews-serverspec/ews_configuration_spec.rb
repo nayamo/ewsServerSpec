@@ -22,7 +22,7 @@ end
 
 describe 'gem packageのインストールの確認'  do
 	['rbenv-rehash', 'bundler'].each do |gem_pkg|
-		describe command("/root/.rbenv/shims/gem search '^#{gem_pkg}$'") do
+		describe command("/usr/local/rbenv/shims/gem search '^#{gem_pkg}$'") do
 		  it { should return_stdout /^#{gem_pkg} (.*)$/ }
 		end
 	end
