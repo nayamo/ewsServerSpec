@@ -1,0 +1,4 @@
+{
+	"host":"xxxx.xxx.xx.xx",
+	"ssh_key":"ssh_key_file_path"
+}
