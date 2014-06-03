@@ -28,7 +28,7 @@ RSpec.configure do |c|
       c.host  = host
       options = Net::SSH::Config.for(c.host)
       options[:key_data] = File.read( host_json['ssh_key'] ) if host_json['ssh_key']
-      options[:user]     = File.read( host_json['user'] )    if host_json['user']
+      options[:user]     = host_json['user']                 if host_json['user']
       user    = options[:user] || Etc.getlogin
       c.ssh   = Net::SSH.start(host, user, options)
     end
