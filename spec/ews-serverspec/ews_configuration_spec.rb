@@ -36,7 +36,7 @@ end
 
 describe '時間設定が cronに登録されているか確認' do
 	describe cron do
-	  it { should have_entry '*/30 * * * * /usr/bin/ntpdate 10.0.0.62' }
+	  it { should have_entry '*/30 * * * * /usr/sbin/ntpdate 10.0.0.62' }
 	end
 end
 describe 'タイムゾーンがJSTか確認'  do
